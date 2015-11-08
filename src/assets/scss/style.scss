@@ -1,0 +1,19 @@
+@import "base/variables";
+@import "base/mixins";
+@import "base/structure";
+@import "base/typography";
+@import "base/links";
+@import "../fonts/icomoon/style";
+
+@import "components/cards";
+
+main {
+  @extend %clearfix;
+}
+
+footer {
+  padding: $padding-v $padding-h;
+  text-align: center;
+}
+
+

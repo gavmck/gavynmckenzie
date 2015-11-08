@@ -1,0 +1,27 @@
+blockquote,
+figure p {
+  margin: 0 $spacing-h;
+  font-family: $font-serif;
+  font-style: normal;
+  font-size: 1.25em;
+  color: $color-brand-primary;
+  font-weight: 300;
+  line-height: $line-height;
+}
+
+figure {
+  margin: 0 0 1em;
+}
+
+cite,
+figcaption {
+  font-style: italic;
+}
+
+figcaption {
+  font-size: 0.75em;
+
+  figure & {
+    margin: 0 $spacing-h $spacing-v;
+  }
+}

@@ -1,0 +1,23 @@
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus{
+    color: darken($link-color, 10%);
+  }
+
+  &:active {
+    color: $link-color;
+  }
+
+  p & {
+    margin: -$padding-v;
+    padding: $padding-v;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}

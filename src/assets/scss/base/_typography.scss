@@ -1,0 +1,72 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  @include font-size($font-size);
+  line-height: $line-height;
+  font-family: $base-font;
+  color: $base-color;
+}
+
+%vertical-rhythm {
+  margin-bottom: $spacing-v;
+}
+
+// Block Level
+@import "headings";
+@import "lists";
+@import "quotes";
+
+p {
+  margin: 0 0 $spacing-v;
+}
+
+.lead {
+  font-weight: 400;
+  font-family: $font-serif;
+  font-size: 1.25em;
+  color: $base-color-dark;
+}
+
+// Text-level
+
+hr {
+  border: 0 none;
+  border-radius: $ui-border-radius;
+  height: $ui-border-width;
+  background: rgba(0,0,0,.075);
+  margin: $spacing-v*2 0;
+}
+
+mark {
+  background: lighten($color-comms-warning,25%);
+  color: #222;
+}
+
+abbr[title] {
+  text-decoration: none;
+  cursor: help;
+  background: lighten($color-comms-info,35%);
+  color: #222;
+}
+
+pre,
+code {
+  font-family: $font-mono;
+  background: $color-brand-light;
+  border-radius: $ui-border-radius;
+}
+
+pre {
+  padding: $padding-v $padding-h;
+}
+
+pre code {
+  background: none;
+}
+
+p code {
+  margin: -.25em 0;
+  padding: .25em .5em;
+}

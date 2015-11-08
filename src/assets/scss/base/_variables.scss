@@ -1,0 +1,65 @@
+//
+// Ingredients
+//
+
+// Sizing
+$font-size: 20;
+$base-unit: 1em;
+$line-height: 1.5; // #NOTE: Do we need different line heights for headings?
+$line-length: 24em; // Ideal line length
+
+// used for padding inside components/elements
+$padding-v: .5em;
+$padding-h: 1em;
+$padding-large: $padding-v * 2 $padding-h * 2;
+$padding-v-fluid: 5%;
+$padding-h-fluid: 5%;
+
+// used for spacing around/between elements
+$spacing-v: 1em;
+$spacing-h: 1em;
+$spacing-v-fluid: 5%;
+$spacing-h-fluid: 5%;
+
+
+// Fonts
+$font-serif: "Bitter",Georgia,Cambria,"Times New Roman",Times,serif;
+$font-sans: -apple-system, ".SFNSText-Regular", "San Francisco", "Oxygen", "Ubuntu", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+$font-mono: courier,"courier new", monospace;
+$font-hand: cursive;
+
+// Colors
+
+$color-brand-primary: #3B638D;
+$color-brand-dark: #333;
+$color-brand-light: #eee;
+
+$color-comms-info:  #4C82A7;
+$color-comms-warning: #f3bb45;
+
+//
+// Base
+//
+
+$base-bg: #fff;
+$base-color: $color-brand-dark;
+$base-color-light: lighten($color-brand-dark,10%);
+$base-color-dark: darken($color-brand-dark,10%);
+$base-font: $font-serif;
+
+$link-color:  #666;
+
+$alert-color-info: $color-comms-info;
+$alert-bg-info: lighten($color-comms-info,35%);
+$alert-color-warning: $color-comms-warning;
+$alert-bg-warning: lighten($color-comms-warning,30%);
+
+//
+// UI
+//
+
+$ui-border-width: .25rem;
+$ui-border-color: darken($color-brand-light,5%);
+$ui-border-radius: .25em;
+$ui-border-radius-large: $ui-border-radius * 8;
+
