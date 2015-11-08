@@ -53,6 +53,14 @@
     width: 75%;
     left: 50%;
     transform: translate(-50%,-50%);
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+}
+
+.wf-active, .wf-inactive {
+  .card--txt span {
+    opacity: 1;
   }
 }
 

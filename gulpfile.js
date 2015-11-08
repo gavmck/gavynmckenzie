@@ -40,7 +40,7 @@ gulp.task("styles", function () {
   return gulp.src("src/assets/scss/style.scss")
     .pipe($.sass())
     // AutoPrefix your CSS so it works between browsers
-    .pipe($.autoprefixer("last 1 version", { cascade: true }))
+    .pipe($.autoprefixer("> 0.25%", { cascade: true }))
     // Directory your CSS file goes to
     .pipe(gulp.dest("src/assets/stylesheets/"))
     .pipe(gulp.dest("serve/assets/stylesheets/"))

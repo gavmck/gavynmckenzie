@@ -214,7 +214,13 @@ a {
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); }
+            transform: translate(-50%, -50%);
+    opacity: 0;
+    -webkit-transition: opacity 1s ease;
+            transition: opacity 1s ease; }
+
+.wf-active .card--txt span, .wf-inactive .card--txt span {
+  opacity: 1; }
 
 .card--etch {
   background: #3a3a3a;
