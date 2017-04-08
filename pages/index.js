@@ -1,11 +1,4 @@
-import Reat from 'react';
-import WebFont from 'webfontloader';
-
-WebFont.load({
-  google: {
-    families: ['Cabin','Old Standard TT']
-  }
-});
+import React from 'react';
 
 export default class App extends React.Component {
   render() {

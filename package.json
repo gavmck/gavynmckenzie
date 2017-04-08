@@ -21,9 +21,13 @@
   "homepage": "https://github.com/gavmck/gavynmckenzie#readme",
   "dependencies": {
     "next": "2.1.0",
-    "normalize.css": "6.0.0",
+    "normalize-scss": "6.0.0",
     "react": "15.4.2",
     "react-dom": "15.4.2",
     "webfontloader": "1.6.27"
+  },
+  "devDependencies": {
+    "node-sass": "4.5.2",
+    "sass-loader": "6.0.3"
   }
 }
