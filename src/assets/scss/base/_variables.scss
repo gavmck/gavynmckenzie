@@ -31,7 +31,7 @@ $font-hand: cursive;
 // Colors
 
 $color-brand-primary: #3B638D;
-$color-brand-dark: #333;
+$color-brand-dark: #331915;
 $color-brand-light: #eee;
 
 $color-comms-info:  #4C82A7;
@@ -44,10 +44,10 @@ $color-comms-warning: #f3bb45;
 $base-bg: #fff;
 $base-color: $color-brand-dark;
 $base-color-light: lighten($color-brand-dark,10%);
-$base-color-dark: darken($color-brand-dark,10%);
+$base-color-dark: $color-brand-dark;
 $base-font: $font-serif;
 
-$link-color:  #666;
+$link-color:  #4c567f;
 
 $alert-color-info: $color-comms-info;
 $alert-bg-info: lighten($color-comms-info,35%);
@@ -62,4 +62,3 @@ $ui-border-width: .25rem;
 $ui-border-color: darken($color-brand-light,5%);
 $ui-border-radius: .25em;
 $ui-border-radius-large: $ui-border-radius * 8;
-

@@ -30,7 +30,6 @@ lsi: false
 limit_posts: 10
 
 # Permalink structure and pagination options
-relative_permalinks: true
 permalink: pretty
 paginate: 10
 paginate_path: 'page:num'
@@ -43,3 +42,5 @@ redcarpet:
   extensions: ['no_intra_emphasis', 'tables', 'fenced_code_blocks', 'autolink', 'smart',
               'strikethrough', 'superscript', 'underline', 'highlight', 'footnotes']
 highlighter: true
+
+gems: [jekyll-paginate]

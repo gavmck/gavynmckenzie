@@ -5,15 +5,6 @@
 @import "base/links";
 @import "../fonts/icomoon/style";
 
-@import "components/cards";
-
-main {
-  @extend %clearfix;
-}
-
-footer {
-  padding: $padding-v $padding-h;
-  text-align: center;
-}
-
-
+@import "components/links";
+@import "components/main";
+@import "components/status-sender";

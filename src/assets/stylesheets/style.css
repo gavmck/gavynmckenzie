@@ -3,26 +3,21 @@
 
 body {
   margin: 0;
-  padding: 0; }
+  padding: 5vw; }
 
 img {
   max-width: 100%;
   display: block; }
 
-html {
-  font-size: 62.5%; }
-
 body {
-  font-size: 20px;
-  font-size: 2rem;
   line-height: 1.5;
   font-family: "Bitter", Georgia, Cambria, "Times New Roman", Times, serif;
-  color: #333; }
+  color: #331915; }
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1.25;
   margin: 0;
-  color: #1a1a1a;
+  color: #331915;
   font-weight: 700;
   font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Oxygen", "Ubuntu", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif; }
   h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
@@ -89,52 +84,13 @@ figcaption {
 p {
   margin: 0 0 1em; }
 
-.lead {
-  font-weight: 400;
-  font-family: "Bitter", Georgia, Cambria, "Times New Roman", Times, serif;
-  font-size: 1.25em;
-  color: #1a1a1a; }
-
-hr {
-  border: 0 none;
-  border-radius: 0.25em;
-  height: 0.25rem;
-  background: rgba(0, 0, 0, 0.075);
-  margin: 2em 0; }
-
-mark {
-  background: #fbe7bd;
-  color: #222; }
-
-abbr[title] {
-  text-decoration: none;
-  cursor: help;
-  background: #c2d6e3;
-  color: #222; }
-
-pre,
-code {
-  font-family: courier, "courier new", monospace;
-  background: #eee;
-  border-radius: 0.25em; }
-
-pre {
-  padding: 0.5em 1em; }
-
-pre code {
-  background: none; }
-
-p code {
-  margin: -.25em 0;
-  padding: .25em .5em; }
-
 a {
-  color: #666;
+  color: #4c567f;
   text-decoration: none; }
   a:hover, a:focus {
-    color: #4d4d4d; }
+    color: #39405f; }
   a:active {
-    color: #666; }
+    color: #4c567f; }
   p a {
     margin: -0.5em;
     padding: 0.5em; }
@@ -169,108 +125,44 @@ a {
 .icon-github-alt:before {
   content: "\f113"; }
 
-.cards {
-  margin: 0;
-  padding: 0;
-  list-style-type: none; }
+.links {
+  list-style-type: none;
+  margin: 1em 0;
+  padding: 0; }
+  .links__item .icon {
+    margin-right: .25em;
+    width: 1em; }
+    .links__item .icon-envelope {
+      color: #c24438; }
+    .links__item .icon-twitter {
+      color: #57B8E1; }
+    .links__item .icon-github-alt {
+      color: #000; }
+  .links__link {
+    display: block; }
+  .links__img {
+    display: inline-block;
+    margin-right: .25em;
+    max-width: 16px;
+    vertical-align: middle; }
 
-.card {
-  position: relative;
-  overflow: hidden; }
-  .card:before {
-    content: "";
+.main {
+  background: #fff;
+  font-family: "Bitter", Georgia, Cambria, "Times New Roman", Times, serif;
+  margin: auto;
+  max-width: 256px; }
+  .main__img {
     display: block;
-    padding-bottom: 100%; }
+    margin: auto;
+    width: 100%; }
+  .main__content {
+    margin: auto;
+    max-width: 512px;
+    padding: 1em 0; }
+  .main__title {
+    font-size: 2rem; }
 
-@media screen and (min-width: 48em) {
-  .card {
-    float: left;
-    width: 50%; } }
-
-@media screen and (min-width: 72em) {
-  .card {
-    width: 33.33%; } }
-
-.card__content {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%; }
-  .card__content img {
-    width: 100%;
-    height: auto; }
-
-.card--txt {
-  font-size: 36px;
-  font-size: 3.6rem; }
-  .card--txt span {
-    position: absolute;
-    top: 50%;
-    text-align: center;
-    display: block;
-    width: 75%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    opacity: 0;
-    -webkit-transition: opacity 1s ease;
-            transition: opacity 1s ease; }
-
-.wf-active .card--txt span, .wf-inactive .card--txt span {
-  opacity: 1; }
-
-.card--etch {
-  background: #3a3a3a;
-  color: #f2f2f2; }
-  .card--etch a {
-    color: #f66; }
-
-.card--instagram {
-  background: #fafafa;
-  color: #4b4f54; }
-  .card--instagram a {
-    color: #4090db; }
-
-.card--icon a {
-  display: block;
-  width: 100%;
-  height: 100%; }
-
-.card--icon .icon {
-  font-size: 200px;
-  font-size: 20rem;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%); }
-
-.card--icon span {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0; }
-
-.card--email a {
-  background: #EAEAEA;
-  color: #C24438; }
-
-.card--twitter a {
-  background: #57B8E1;
-  color: #FFF; }
-
-.card--github a {
-  background: #000;
-  color: #FFF; }
-
-footer {
-  padding: 0.5em 1em;
-  text-align: center; }
+.status-sender {
+  min-height: 1.5em; }
+  .status-sender__text {
+    opacity: .5; }
