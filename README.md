@@ -1,5 +1,3 @@
 # Gavyn McKenzie
 
-My website, initialised with Yo-jekyllizer.
-
-Check out the gulp file to run.
+My website. Just moved hosting and having a teardown. Bear with me.
