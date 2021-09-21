@@ -11,45 +11,147 @@
 
       html,
       body {
-        height: 100%;
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
       }
 
-      body {
-        align-items: center;
-        display: flex;
-        justify-content: center;
-        margin: 0;
+      h1 {
+        font-size: 3.375rem;
+        line-height: 4.5rem;
+        margin: 1.5rem 0;
+      }
+
+      h2 {
+        font-size: 2.25rem;
+        line-height: 3rem;
+        margin: 1.5rem 0;
+      }
+
+      h3 {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        margin: 1.5rem 0;
+      }
+
+      p,
+      ul {
+        margin: 0 0 1.5rem;
+      }
+
+      .app {
+        margin: auto;
+        max-width: 35em;
         padding: 1em;
       }
 
-      section {
-        flex: 0 1 auto;
-        max-width: 27.5em;
+      .lead {
+        font-size: 1.5rem;
+      }
+
+      .roles {
+        list-style-type: none;
+        margin: 0 0 1.5rem;
+        padding: 0;
+      }
+
+      .quote {
+        margin: 0 0 1.5rem;
+        padding: 0;
+      }
+
+      .quote__text {
+        margin: 0;
+        padding: 0;
       }
     </style>
   </head>
   <body>
-    <section>
-      <h1>Gavyn McKenzie</h1>
-      <p>I make things on the internet.</p>
+    <div class="app">
+      <header class="header">
+        <h1>Gavyn McKenzie</h1>
+        <p class="lead">Over 2 decades of front-end development experience.</p>
+        <ul class="roles">
+          <li class="roles__item">Front-end Developer</li>
+          <li class="roles__item">
+            <a class="roles__link" href="https://etch.co" target="_blank" rel="noopener noreferrer">Etch Software</a> co-owner
+          </li>
+        </ul>
+      </header>
 
-      <ul>
-        <li>
-          <a href="https://etch.co" target="_blank" rel="noopener noreferrer">
-            Etch Software
-          </a>
-        </li>
-        <li>
-          <a href="https://twitter.com/gavynmckenzie" target="_blank" rel="noopener noreferrer">
-            @gavynmckenzie
-          </a>
-        </li>
-        <li>
-          <a href="https://github.com/gavmck" target="_blank" rel="noopener noreferrer">
-            Github
-          </a>
-        </li>
-      </ul>
-    </section>
+      <main class="main">
+        <p>
+          Most excited by accessibility, performance, long lifecycle products, developer experience, 
+          loading & empty states, graceful error handling and making things go <em>whizz</em>.
+        </p>
+
+        <p>
+          Currently specialising in: consultancy for design system architecture.
+        </p>
+
+        <h2>Quotes from colleagues</h2>
+
+        <figure class="quote">
+          <blockquote class="quote__text">
+            An agencies dream.
+          </blockquote>
+          <figcaption class="quote__author">
+            Andy Shield, 
+            <a class="quote__link" href="https://redbullet.co.uk" target="_blank" rel="noopener noreferrer">
+              Red Bullet
+            </a>
+          </figcaption>
+        </figure>
+
+        <figure class="quote">
+          <blockquote class="quote__text">
+            Lightning fast with attention to detail.
+          </blockquote>
+          <figcaption class="quote__author">
+            Anna Divers, 
+            <a class="quote__link" href="https://holidayextras.com" target="_blank" rel="noopener noreferrer">
+              Holiday Extras
+            </a>
+          </figcaption>
+        </figure>
+
+        <figure class="quote">
+          <blockquote class="quote__text">
+            We've given him the nickname SuperGav.
+          </blockquote>
+          <figcaption class="quote__author">
+            Jessica Lewis, 
+            <a class="quote__link" href="https://admiral.com" target="_blank" rel="noopener noreferrer">
+              Admiral
+            </a>
+          </figcaption>
+        </figure>
+
+        <h2>Get in touch</h2>
+        <ul>
+          <li>
+            <a href="https://etch.co" target="_blank" rel="noopener noreferrer">
+              Etch Software
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/gavynmckenzie" target="_blank" rel="noopener noreferrer">
+              @gavynmckenzie
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/gavmck" target="_blank" rel="noopener noreferrer">
+              Github
+            </a>
+          </li>
+          <li>
+            <a href="mailto:gavyn@etch.co?subject=Let's work together">
+              gavyn@etch.co
+            </a>
+          </li>
+        </ul>
+      </main>
+    </div>
   </body>
 </html>
