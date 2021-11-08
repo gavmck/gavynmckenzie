@@ -5,73 +5,191 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style type="text/css">
+      :root {
+        --font-family-body: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+        
+        --font-size: 1rem;
+        --line-height: 1.5rem;
+
+        --font-size-lg: 1.25rem;
+        --line-height-lg: var(--line-height);
+        
+        --font-size-xl: 2.25rem;
+        --line-height-xl: 3rem;
+        
+        --font-size-xxl: 3.375rem;
+        --line-height-xxl: 4.5rem;
+
+        --spacing: 1.5rem;
+        --spacing-sm: 0.75rem;
+
+        --border-radius: .25rem;
+
+        --button-background: royalblue;
+        --button-color: #fff;
+      }
+
       * {
         box-sizing: border-box;
       }
 
       html,
       body {
-        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
-        line-height: 1.5;
+        font-family: var(--font-family-body);
+        font-size: var(--font-size);
+        line-height: var(--line-height);
         margin: 0;
         padding: 0;
+        position: relative;
+      }
+
+      body {
+        display: grid;
+        gap: var(--spacing);
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+        margin: auto;
+        max-width: 80em;
+        padding: var(--spacing);
       }
 
       h1 {
-        font-size: 3.375rem;
-        line-height: 4.5rem;
-        margin: 1.5rem 0;
+        font-size: var(--font-size-xxl);
+        line-height: var(--line-height-xxl);
+        margin: var(--spacing) 0;
       }
 
       h2 {
-        font-size: 2.25rem;
-        line-height: 3rem;
-        margin: 1.5rem 0;
+        font-size: var(--font-size-xl);
+        line-height: var(--line-height-xl);
+        margin: var(--spacing) 0;
       }
 
       h3 {
-        font-size: 1.5rem;
-        line-height: 1.5rem;
-        margin: 1.5rem 0;
+        font-size: var(--font-size-lg);
+        line-height: var(--line-height-lg);
+        margin: var(--spacing) 0;
       }
 
       p,
       ul {
-        margin: 0 0 1.5rem;
+        margin: 0 0 var(--spacing);
       }
 
       .app {
+        grid-column: 1 / span 12;
+        grid-row: 1 / 1; 
         margin: auto;
-        max-width: 35em;
-        padding: 1em;
+      }
+
+      @media (min-width: 37.5em) {
+        .app { grid-column: 2 / span 10; }
+      }
+
+      @media (min-width: 48em) {
+        .app { grid-column: 3 / span 8; }
+      }
+
+      @media (min-width: 61.25em) {
+        .app { grid-column: 4 / span 6; }
       }
 
       .lead {
-        font-size: 1.5rem;
+        font-size: var(--font-size-lg);
+      }
+
+      .button {
+        appearance: none;
+        background: var(--button-background);
+        border-radius: var(--border-radius);
+        color: var(--button-color);
+        border: 0;
+        font-size: var(--font-size);
+        line-height: var(--line-height);
+        padding: var(--spacing-sm) var(--spacing);
       }
 
       .roles {
         list-style-type: none;
-        margin: 0 0 1.5rem;
+        margin: 0 0 var(--spacing);
         padding: 0;
       }
 
       .quote {
-        margin: 0 0 1.5rem;
+        margin: 0 0 var(--spacing);
         padding: 0;
       }
 
       .quote__text {
-        font-size: 1.5rem;
+        font-size: var(--font-size-lg);
         font-style: italic;
         margin: 0;
         padding: 0;
+        quotes: "“" "”" "‘" "’";
+      }
+
+      .quote__text::before {
+        content: open-quote;
+      }
+
+      .quote__text::after {
+        content: close-quote;
+      }
+
+      .form-group {
+        display: block; 
+      }
+
+      .debug-controls {
+        grid-column: 1 / span 12;
+        grid-row: 2 / 2;
+      }
+
+      .debug-controls__title {
+        font-size: var(--font-size-lg);
+        line-height: var(--line-height-lg);
+      }
+
+      /* Debug classes */
+      .horizontal-grid::before {
+        background-image: repeating-linear-gradient(
+          to right, 
+          transparent, 
+          transparent 1.5rem, 
+          rgba(0, 0, 0, 0.025) 1.5rem,
+          rgba(0, 0, 0, 0.025) calc((100% - 1.5rem) / 12)
+        );
+        background-repeat: repeat;
+        bottom: 0;
+        content: '';
+        left: 0;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+
+      .vertical-grid::after {
+        background-image: repeating-linear-gradient(
+          to bottom, 
+          transparent, 
+          transparent calc(1.5rem - 1px), 
+          rgba(0, 0, 0, 0.2) 1.5rem
+        );
+        background-repeat: repeat;
+        bottom: 0;
+        content: '';
+        left: 0;
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        width: 100%;
       }
     </style>
   </head>
-  <body>
+  <body class="vertical-grid horizontal-grid">
     <div class="app">
-      <header class="header">
+      <header class="hero">
         <h1>Gavyn McKenzie</h1>
         <p class="lead">Over 2 decades of front-end development experience.</p>
         <ul class="roles">
@@ -83,77 +201,138 @@
       </header>
 
       <main class="main">
-        <p>
-          Most excited by accessibility, performance, long lifecycle products, developer experience, 
-          loading & empty states, graceful error handling and making things go <em>whizz</em>.
-        </p>
+        <section class="intro">
+          <p>
+            Most excited by accessibility, performance, long lifecycle products, developer experience, 
+            loading & empty states, graceful error handling and making things go <em>whizz</em>.
+          </p>
 
-        <p>
-          Currently specialising in: consultancy for design system architecture.
-        </p>
+          <p>
+            Currently specialising in: consultancy for design system architecture.
+          </p>
+        </section>
 
-        <h2>Quotes from colleagues</h2>
+        <section class="quotes">
+          <h2>Quotes from colleagues</h2>
 
-        <figure class="quote">
-          <blockquote class="quote__text">
-            An agencies dream.
-          </blockquote>
-          <figcaption class="quote__author">
-            Andy Shield, 
-            <a class="quote__link" href="https://redbullet.co.uk" target="_blank" rel="noopener noreferrer">
-              Red Bullet
-            </a>
-          </figcaption>
-        </figure>
+          <figure class="quote">
+            <blockquote class="quote__text">
+              An agencies dream.
+            </blockquote>
+            <figcaption class="quote__author">
+              Andy Shield, 
+              <a class="quote__link" href="https://redbullet.co.uk" target="_blank" rel="noopener noreferrer">
+                Red Bullet
+              </a>
+            </figcaption>
+          </figure>
 
-        <figure class="quote">
-          <blockquote class="quote__text">
-            Lightning fast with attention to detail.
-          </blockquote>
-          <figcaption class="quote__author">
-            Anna Divers, 
-            <a class="quote__link" href="https://holidayextras.com" target="_blank" rel="noopener noreferrer">
-              Holiday Extras
-            </a>
-          </figcaption>
-        </figure>
+          <figure class="quote">
+            <blockquote class="quote__text">
+              Lightning fast with attention to detail.
+            </blockquote>
+            <figcaption class="quote__author">
+              Anna Divers, 
+              <a class="quote__link" href="https://holidayextras.com" target="_blank" rel="noopener noreferrer">
+                Holiday Extras
+              </a>
+            </figcaption>
+          </figure>
 
-        <figure class="quote">
-          <blockquote class="quote__text">
-            We've given him the nickname SuperGav.
-          </blockquote>
-          <figcaption class="quote__author">
-            Jessica Lewis, 
-            <a class="quote__link" href="https://admiral.com" target="_blank" rel="noopener noreferrer">
-              Admiral
-            </a>
-          </figcaption>
-        </figure>
+          <figure class="quote">
+            <blockquote class="quote__text">
+              We've given him the nickname SuperGav.
+            </blockquote>
+            <figcaption class="quote__author">
+              Jessica Lewis, 
+              <a class="quote__link" href="https://admiral.com" target="_blank" rel="noopener noreferrer">
+                Admiral
+              </a>
+            </figcaption>
+          </figure>
+        </section>
 
-        <h2>Get in touch</h2>
-        <ul>
-          <li>
-            <a href="https://etch.co" target="_blank" rel="noopener noreferrer">
-              Etch Software
-            </a>
-          </li>
-          <li>
-            <a href="https://twitter.com/gavynmckenzie" target="_blank" rel="noopener noreferrer">
-              @gavynmckenzie
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/gavmck" target="_blank" rel="noopener noreferrer">
-              Github
-            </a>
-          </li>
-          <li>
-            <a href="mailto:gavyn@etch.co?subject=Let's work together">
-              gavyn@etch.co
-            </a>
-          </li>
-        </ul>
+        <section class="contact">
+          <h2>Get in touch</h2>
+          <ul>
+            <li>
+              <a href="https://etch.co" target="_blank" rel="noopener noreferrer">
+                Etch Software
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/gavynmckenzie" target="_blank" rel="noopener noreferrer">
+                @gavynmckenzie
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/gavmck" target="_blank" rel="noopener noreferrer">
+                Github
+              </a>
+            </li>
+            <li>
+              <a href="mailto:gavyn@etch.co?subject=Let's work together">
+                gavyn@etch.co
+              </a>
+            </li>
+          </ul>
+        </section>
       </main>
+      <footer class="footer">
+        <p>No 🍪 needed.</p>
+        <!-- <button type="button" class="button js-debug">
+          Debug
+        </button> -->
+      </footer>
     </div>
+    <!-- <section class="debug-controls">
+      <h2 class="debug-controls__title">Debug controls</h2>
+
+      <form action="" method="GET" class="js-debug-form">
+        <div class="form-group">
+          <label class="checkbox">
+            <input type="checkbox" name="vertical-grid" class="checkbox__input" />
+            <span class="checkbox__text">Vertical grid</span>
+          </label>
+        </div>
+        <div class="form-group">
+          <label class="checkbox">
+            <input type="checkbox" name="horizontal-grid" class="checkbox__input" />
+            <span class="checkbox__text">Horizontal grid</span>
+          </label>
+        </div>
+      </form>
+    </section> -->
+    <script type="text/javascript">
+      var body = document.querySelector('body');
+
+      // Turn the debug panel on/off
+      const debugButton = document.querySelector('.js-debug');
+      debugButton.addEventListener('click', () => {
+        body.classList.toggle('debug');
+        debugButton.classList.toggle('button--active');
+      });
+
+      // Handle debug form submit
+      const debugForm = document.querySelector('.js-debug-form');
+      debugForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+      });
+
+      // Toggles a body class when a checkbox is checked/unechecked
+      function checkboxBodyClass(name) {
+        const checkbox = document.querySelector(`[name="${name}"]`);
+        checkbox.addEventListener('change', (e) => {
+          if (e.target.checked) {
+            body.classList.add(name);
+          } else {
+            body.classList.remove(name);
+          }
+        });
+      }
+
+      checkboxBodyClass('vertical-grid');
+      checkboxBodyClass('horizontal-grid');
+    </script>
   </body>
 </html>

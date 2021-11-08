@@ -1,5 +1,5 @@
 # Gavyn McKenzie
 
-My website. Just moved hosting and having a teardown. Bear with me.
+Dependencies go out of date. Builds come and go. HTML, CSS and Javascript are always the core of the web.
 
-This site is intentionally choosing to use no build scripts, no dependencies, just the raw core of the web - HTML, CSS, JavaScript.
+This site intentionally uses nothing but the basic building blocks of the internet.
