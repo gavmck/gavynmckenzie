@@ -9,7 +9,7 @@
 }
 
 .hero__content {
-  padding: var(--section-spacing) var(--gutter);
+  padding: var(--spacing-lg) var(--gutter);
 }
 
 .hero__title {
@@ -46,9 +46,17 @@
     grid-column: 5 / span 4;
     grid-row: 1;
   }
+
+  .hero__img {
+    aspect-ratio: 393 / 303;
+  }
 }
 
 @media (min-width: 60rem) {
+  .hero__content {
+    padding: var(--section-spacing) 0 var(--section-spacing) var(--gutter);
+  }
+
   .hero__title {
     font-size: 4rem;
   }
