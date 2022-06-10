@@ -1,3 +1,25 @@
+@keyframes hero-image-entrance {
+  0% {
+    opacity: 0;
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes hero-content-entrance {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .hero {
   background: var(--skin-background);
   color: var(--skin-color);
@@ -10,13 +32,26 @@
 
 .hero__content {
   padding: var(--spacing-lg) var(--gutter);
+  position: relative;
+  z-index: 1;
 }
 
-.hero__title {
-  margin-top: 0;
+.hero__content h1,
+.hero__content p {
+  animation: hero-content-entrance .5s ease-in-out 1 both;
+}
+
+.hero__content p {
+  animation-delay: .1s;
+}
+
+.hero__content p:nth-child(2) {
+  animation-delay: .2s;
 }
 
 .hero__img {
+  animation: hero-image-entrance .5s ease-in-out 1 both;
+  animation-delay: .5s;
   aspect-ratio: 393 / 390;
   display: block;
   height: auto;
