@@ -1,0 +1,25 @@
+.quotes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing);
+}
+
+@media (min-width: 40rem) {
+  .quotes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .quotes > *:last-child {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 60rem) {
+  .quotes {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .quotes > *:last-child {
+    grid-column: initial;
+  }
+}

@@ -1,0 +1,9 @@
+.text--lg {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+}
+
+.text--xl {
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-xl);
+}

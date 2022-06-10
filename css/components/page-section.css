@@ -1,0 +1,5 @@
+.page-section {
+  background: var(--skin-background);
+  color: var(--skin-color);
+  padding: var(--section-spacing) 0;
+}

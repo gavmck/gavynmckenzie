@@ -1,0 +1,13 @@
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm) var(--spacing);
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contact__link {
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-lg);
+}

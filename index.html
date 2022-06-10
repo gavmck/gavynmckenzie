@@ -25,290 +25,160 @@
         "gender": "male",
         "nationality": "British",
         "url": "https://gavyn-mckenzie.co.uk",
-        "sameAs" : [ 
+        "sameAs" : [
           "https://twitter.com/gavynmckenzie",
           "https://github.com/gavmck"
         ]
       }
     </script>
 
-    <style type="text/css">
-      :root {
-        --font-family-body: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
 
-        --base-unit: 0.375rem; /* line height / 4 */
-        
-        --font-size: 1rem;
-        --line-height: calc(var(--base-unit) * 4);
-
-        --font-size-lg: 1.25rem;
-        --line-height-lg: calc(var(--line-height) * 1.25);
-        
-        --font-size-xl: 2.25rem;
-        --line-height-xl: calc(var(--line-height) * 1.75);
-        
-        --font-size-xxl: 3.375rem;
-        --line-height-xxl: calc(var(--line-height) * 2.5);
-
-        --spacing: var(--line-height);
-        --spacing-lg: calc(var(--spacing) * 1.5);
-        --spacing-sm: calc(var(--spacing) / 2);
-
-        --border-radius: .25rem;
-
-        --button-background: royalblue;
-        --button-color: #fff;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html,
-      body {
-        font-family: var(--font-family-body);
-        font-size: var(--font-size);
-        line-height: var(--line-height);
-        margin: 0;
-        padding: 0;
-        position: relative;
-      }
-
-      body {
-        display: grid;
-        gap: var(--spacing);
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: auto;
-        margin: auto;
-        max-width: 80em;
-        padding: var(--spacing);
-      }
-
-      h1, 
-      h2, 
-      h3, 
-      h4 {
-        margin: var(--spacing-lg) 0 var(--spacing-sm);
-      }
-
-      h1 {
-        font-size: var(--font-size-xxl);
-        line-height: var(--line-height-xxl);
-      }
-
-      h2 {
-        font-size: var(--font-size-xl);
-        line-height: var(--line-height-xl);
-      }
-
-      h3 {
-        font-size: var(--font-size-lg);
-        line-height: var(--line-height-lg);
-      }
-
-      p,
-      ul {
-        margin: 0 0 var(--spacing-sm);
-      }
-
-      .app {
-        grid-column: 1 / span 12;
-        grid-row: 1 / 1; 
-        margin: auto;
-      }
-
-      @media (min-width: 37.5em) {
-        .app { grid-column: 2 / span 10; }
-      }
-
-      @media (min-width: 48em) {
-        .app { grid-column: 3 / span 8; }
-      }
-
-      @media (min-width: 61.25em) {
-        .app { grid-column: 4 / span 6; }
-      }
-
-      .lead {
-        font-size: var(--font-size-lg);
-        line-height: var(--line-height-lg);
-      }
-
-      .button {
-        appearance: none;
-        background: var(--button-background);
-        border-radius: var(--border-radius);
-        color: var(--button-color);
-        border: 0;
-        font-size: var(--font-size);
-        line-height: var(--line-height);
-        padding: var(--spacing-sm) var(--spacing);
-      }
-
-      .roles {
-        list-style-type: none;
-        margin: 0 0 var(--spacing-sm);
-        padding: 0;
-      }
-
-      .quote {
-        margin: 0 0 var(--spacing-sm);
-        padding: 0;
-      }
-
-      .quote__text {
-        font-size: var(--font-size-lg);
-        font-style: italic;
-        line-height: var(--line-height-lg);
-        margin: 0;
-        padding: 0;
-        quotes: "“" "”" "‘" "’";
-      }
-
-      .quote__text::before {
-        content: open-quote;
-      }
-
-      .quote__text::after {
-        content: close-quote;
-      }
-
-      .horizontal-grid::before {
-        background-image: repeating-linear-gradient(
-          to right, 
-          transparent, 
-          transparent var(--spacing), 
-          rgba(0, 0, 0, 0.025) var(--spacing),
-          rgba(0, 0, 0, 0.025) calc((100% - var(--spacing)) / 12)
-        );
-        background-repeat: repeat;
-        bottom: 0;
-        content: '';
-        left: 0;
-        pointer-events: none;
-        position: absolute;
-        top: 0;
-        width: 100%;
-      }
-
-      .vertical-grid::after {
-        background-image: repeating-linear-gradient(
-          to bottom, 
-          transparent, 
-          transparent calc(var(--base-unit) - 1px), 
-          rgba(0, 0, 0, 0.2) var(--base-unit)
-        );
-        background-repeat: repeat;
-        bottom: 0;
-        content: '';
-        left: 0;
-        pointer-events: none;
-        position: absolute;
-        top: 0;
-        width: 100%;
-      }
-
-      .vertical-grid h1,
-      .vertical-grid h2,
-      .vertical-grid h3,
-      .vertical-grid h4, 
-      .vertical-grid h5,
-      .vertical-grid p,
-      .vertical-grid ul,
-      .vertical-grid ol,
-      .vertical-grid figure {
-        background: rgba(0, 0, 0, 0.05);
-      }
-    </style>
+    <link rel="stylesheet" href="/css/main.css" />
   </head>
-  <body class="vertical-grid horizontal-grid">
+  <body>
     <div class="app">
-      <header class="hero">
-        <h1>Gavyn McKenzie</h1>
-        <p class="lead">Over 2 decades of front-end development experience.</p>
-        <ul class="roles">
-          <li class="roles__item">Front-end Developer</li>
-          <li class="roles__item">
-            <a class="roles__link" href="https://etch.co" target="_blank" rel="noopener noreferrer">Etch Software</a> co-owner
-          </li>
-        </ul>
-      </header>
+      <div class="skin skin--medium">
+        <header class="hero">
+          <div class="hero__inner">
+            <div class="hero__content">
+              <h1>Gavyn McKenzie</h1>
+              <div class="text text--lg">
+                <p>Over 2 decades of front-end development experience.</p>
+                <p>
+                  Co-owner & developer @<a href="https://etch.co" target="_blank" rel="noopener noreferrer">Etch</a>
+                </p>
+              </div>
+            </div>
+            <div class="hero__image">
+              <img
+                src="/images/gav.jpg"
+                alt="Headshot of Gav smiling. He has a big bushy beard."
+                class="hero__img"
+                width="393"
+                height="392"
+                loading="lazy"
+              />
+            </div>
+          </header>
+        </div>
+      </div>
+
 
       <main class="main">
-        <section class="intro">
-          <p>
-            Most excited by accessibility, performance, long lifecycle products, developer experience, 
-            loading & empty states, graceful error handling and making things go <em>whizz</em>.
-          </p>
+        <div class="skin skin--light">
+          <section class="page-section">
+            <div class="container">
+              <h2 hidden>Driving forces</h2>
+              <div class="text text--lg">
+                <div class="line-length">
+                  <div class="spacing spacing--bottom-lg">
+                    <p>
+                      Most excited by accessibility, performance, long lifecycle products, developer experience,
+                      loading & empty states, graceful error handling and making things go <em>whizz</em>.
+                    </p>
 
-          <p>
-            Currently specialising in: consultancy for design system architecture.
-          </p>
-        </section>
+                    <hr />
 
-        <section class="quotes">
-          <h2>Quotes from colleagues</h2>
+                    <p>
+                      <strong>Current focus</strong> consultancy for design system architecture.
+                    </p>
+                  </div>
+                </div>
 
-          <figure class="quote">
-            <blockquote class="quote__text">An agencies dream.</blockquote>
-            <figcaption class="quote__author">
-              Andy Shield, 
-              <a class="quote__link" href="https://redbullet.co.uk" target="_blank" rel="noopener noreferrer">
-                Red Bullet
-              </a>
-            </figcaption>
-          </figure>
+                <h3>Get in touch</h3>
 
-          <figure class="quote">
-            <blockquote class="quote__text">Lightning fast with attention to detail.</blockquote>
-            <figcaption class="quote__author">
-              Anna Divers, 
-              <a class="quote__link" href="https://holidayextras.com" target="_blank" rel="noopener noreferrer">
-                Holiday Extras
-              </a>
-            </figcaption>
-          </figure>
+                <ul class="contact">
+                  <li class="contact__item">
+                    <a class="contact__link" href="mailto:gavyn@etch.co?subject=Let's work together">
+                      gavyn@etch.co
+                    </a>
+                  </li>
+                  <li class="contact__item">
+                    <a class="contact__link" href="https://twitter.com/gavynmckenzie" target="_blank" rel="noopener noreferrer">
+                      @gavynmckenzie
+                    </a>
+                  </li>
+                  <li class="contact__item">
+                    <a class="contact__link" href="https://github.com/gavmck" target="_blank" rel="noopener noreferrer">
+                      Github
+                    </a>
+                  </li>
+                  <li class="contact__item">
+                    <a class="contact__link" href="https://etch.co" target="_blank" rel="noopener noreferrer">
+                      Etch
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
 
-          <figure class="quote">
-            <blockquote class="quote__text">We've given him the nickname SuperGav.</blockquote>
-            <figcaption class="quote__author">
-              Jessica Lewis, 
-              <a class="quote__link" href="https://admiral.com" target="_blank" rel="noopener noreferrer">
-                Admiral
-              </a>
-            </figcaption>
-          </figure>
-        </section>
+        <div class="skin skin--dark">
+          <section class="page-section">
+            <div class="container">
+              <h2>Kind words</h2>
 
-        <section class="contact">
-          <h2>Get in touch</h2>
-          <ul>
-            <li>
-              <a href="https://etch.co" target="_blank" rel="noopener noreferrer">
-                Etch Software
-              </a>
-            </li>
-            <li>
-              <a href="https://twitter.com/gavynmckenzie" target="_blank" rel="noopener noreferrer">
-                @gavynmckenzie
-              </a>
-            </li>
-            <li>
-              <a href="https://github.com/gavmck" target="_blank" rel="noopener noreferrer">
-                Github
-              </a>
-            </li>
-            <li>
-              <a href="mailto:gavyn@etch.co?subject=Let's work together">
-                gavyn@etch.co
-              </a>
-            </li>
-          </ul>
-        </section>
+              <div class="skin skin--light">
+                <div class="quotes">
+                  <figure class="quote">
+                    <blockquote class="quote__text">An agencies dream.</blockquote>
+                    <figcaption class="quote__author">
+                      <img class="quote__avatar" src="/images/quotes/andy-shield.jpeg" alt="Andy Shield" />
+                      <div class="quote__author-content">
+                        Andy Shield &mdash;
+                        <a class="quote__link" href="https://redbullet.co.uk" target="_blank" rel="noopener noreferrer">
+                          Red Bullet
+                        </a>
+                        <span class="quote__role">Founder</span>
+                      </div>
+                    </figcaption>
+                  </figure>
+
+                  <figure class="quote">
+                    <blockquote class="quote__text">Lightning fast with attention to detail.</blockquote>
+                    <figcaption class="quote__author">
+                      <img class="quote__avatar" src="/images/quotes/anna-divers.jpeg" alt="Anna Divers" />
+                      <div class="quote__author-content">
+                        Anna Divers &mdash;
+                        <a class="quote__link" href="https://holidayextras.com" target="_blank" rel="noopener noreferrer">
+                          Holiday Extras
+                        </a>
+                        <span class="quote__role">Director of Product & Design</span>
+                      </div>
+                    </figcaption>
+                  </figure>
+
+                  <figure class="quote">
+                    <blockquote class="quote__text">We've given him the nickname SuperGav.</blockquote>
+                    <figcaption class="quote__author">
+                      <img class="quote__avatar" src="/images/quotes/jessica-lewis.jpeg" alt="Jessica Lewis" />
+                      <div class="quote__author-content">
+                        Jessica Lewis &mdash;
+                        <a class="quote__link" href="https://admiral.com" target="_blank" rel="noopener noreferrer">
+                          Admiral
+                        </a>
+                        <span class="quote__role">Senior Digital Chapter Lead</span>
+                      </div>
+                    </figcaption>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
       </main>
-      <footer class="footer">
-        <p>No 🍪 needed.</p>
-      </footer>
+
+      <div class="skin skin--dark">
+        <footer class="footer">
+          <div class="container">
+            <p>No <span class="emoji" aria-label="cookies">🍪</span> needed.</p>
+          </div>
+        </footer>
+      </div>
     </div>
     <script type="text/javascript">
       if ('serviceWorker' in navigator) {

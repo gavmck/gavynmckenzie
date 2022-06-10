@@ -1,0 +1,5 @@
+.footer {
+  background: var(--skin-background);
+  color: var(--skin-color);
+  padding: var(--spacing-fluid-sm) 0;
+}

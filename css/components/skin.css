@@ -1,0 +1,17 @@
+.skin--light {
+  --skin-background: var(--skin-background-light);
+  --skin-color: var(--skin-color-light);
+  --skin-link-color: var(--skin-link-color-light);
+}
+
+.skin--medium {
+  --skin-background: var(--skin-background-medium);
+  --skin-color: var(--skin-color-medium);
+  --skin-link-color: var(--skin-link-color-medium);
+}
+
+.skin--dark {
+  --skin-background: var(--skin-background-dark);
+  --skin-color: var(--skin-color-dark);
+  --skin-link-color: var(--skin-link-color-dark);
+}
