@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>531 Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Calculate your weights for the next 11 weeks of training.">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+    <link rel="manifest" href="/images/icons/site.webmanifest">
+    <link rel="mask-icon" href="/images/icons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/images/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="/images/icons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/531/css/main.css" />
+  </head>
+  <body>
+    <div class="skin skin--medium">
+      <header class="page-section">
+        <div class="container">
+          <h1>531 Calculator</h1>
+          <p>
+            Calculate your weights for the next 11 weeks of training.
+          </p>
+        </div>
+      </header>
+    </div>
+
+    <div class="skin skin--light">
+      <section class="page-section">
+        <div class="container">
+
+          <h2>Training maxes</h2>
+          <p>
+            Should be a strong set of 3-5 reps. When in doubt, start light.
+          </p>
+
+          <form id="form" method="GET" action="/531#results-container">
+            <div class="form-group">
+              <label for="squat">Squat</label>
+              <input type="number" id="squat" name="squat" value="100" min="1" required />
+            </div>
+
+            <div class="form-group">
+              <label for="bench">Bench</label>
+              <input type="number" id="bench" name="bench" value="100" min="1" required />
+            </div>
+
+            <div class="form-group">
+              <label for="deadlift">Deadlift</label>
+              <input type="number" id="deadlift" name="deadlift" value="100" min="1" required />
+            </div>
+
+            <div class="form-group">
+              <label for="press">Press</label>
+              <input type="number" id="press" name="press" value="100" min="1" required />
+            </div>
+
+            <div class="form-group">
+              <label for="program">Program</label>
+              <select id="program" name="program">
+                <option value="1000percentawesome">1000% awesome</option>
+              </select>
+            </div>
+
+            <button type="submit">
+              Submit
+            </button>
+          </form>
+        </div>
+      </section>
+    </div>
+
+    <div class="skin skin--light" id="results-container" hidden>
+      <section class="page-section">
+        <div class="container">
+          <h2>Program</h2>
+          <p>
+            In between leader and anchor, do a single at TM (training max) for the main lift of the day.
+            After the anchor, do a TM test. No supplemental on these weeks.
+          </p>
+
+          <div id="results"></div>
+        </div>
+      </section>
+    </div>
+
+    <script src="/531/app.js" defer></script>
+  </body>
+</html>

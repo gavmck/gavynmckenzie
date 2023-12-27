@@ -1,0 +1,47 @@
+@import '../../css/variables.css';
+@import '../../css/base.css';
+
+@import '../../css/components/container.css';
+@import '../../css/components/page-section.css';
+@import '../../css/components/skin.css';
+@import '../../css/components/spacing.css';
+
+input,
+select,
+button {
+  appearance: none;
+  border: 1px solid;
+  display: block;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  padding: var(--spacing-sm);
+  width: 100%;
+}
+
+details {
+  border: 1px solid;
+  margin-bottom: -1px;
+  padding: var(--spacing-sm);
+}
+
+summary {
+  --neg-spacing: calc(var(--spacing-sm) * -1);
+  cursor: pointer;
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  margin: var(--neg-spacing);
+  padding: var(--spacing-sm);
+}
+
+details[open] summary {
+  border-bottom: 1px solid;
+  margin-bottom: var(--spacing-sm);
+}
+
+.form-group {
+  margin-bottom: var(--spacing);
+}
+
+.form-group + button[type="submit"] {
+  margin-top: var(--spacing-lg);
+}
