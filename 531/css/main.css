@@ -1,47 +1,37 @@
 @import '../../css/variables.css';
 @import '../../css/base.css';
+@import '../../css/forms.css';
 
 @import '../../css/components/container.css';
+@import '../../css/components/line-length.css';
 @import '../../css/components/page-section.css';
 @import '../../css/components/skin.css';
 @import '../../css/components/spacing.css';
+@import '../../css/components/text.css';
 
-input,
-select,
-button {
-  appearance: none;
-  border: 1px solid;
-  display: block;
-  font-size: var(--font-size);
-  line-height: var(--line-height);
-  padding: var(--spacing-sm);
-  width: 100%;
-}
+@import './components/day.css';
+@import './components/form-group.css';
 
 details {
-  border: 1px solid;
-  margin-bottom: -1px;
-  padding: var(--spacing-sm);
+  background: var(--color-white);
+  border: 1px solid var(--color-grey-4);
+  border-width: 1px 0;
+  margin: 0 calc(var(--gutter) * -1) -1px;
+}
+
+details[open] {
+  border-color: var(--color-grey-3);
+  position: relative;
 }
 
 summary {
-  --neg-spacing: calc(var(--spacing-sm) * -1);
   cursor: pointer;
   font-size: var(--font-size);
   line-height: var(--line-height);
-  margin: var(--neg-spacing);
-  padding: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--gutter);
 }
 
 details[open] summary {
-  border-bottom: 1px solid;
-  margin-bottom: var(--spacing-sm);
+  border-bottom: 1px solid var(--color-grey-3);
 }
 
-.form-group {
-  margin-bottom: var(--spacing);
-}
-
-.form-group + button[type="submit"] {
-  margin-top: var(--spacing-lg);
-}

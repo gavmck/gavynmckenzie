@@ -121,6 +121,54 @@ function setupProgram() {
         },
       ],
     },
+    'boringbutbig': {
+      sections: [
+        {
+          title: 'Leader',
+          length: 6,
+          days: [
+            [
+              { lift: 'squat', variant: '5spro' },
+              { lift: 'squat', variant: 'bbb' },
+            ],
+            [
+              { lift: 'bench', variant: '5spro' },
+              { lift: 'bench', variant: 'bbb' },
+            ],
+            [
+              { lift: 'deadlift', variant: '5spro' },
+              { lift: 'deadlift', variant: 'bbb' },
+            ],
+            [
+              { lift: 'press', variant: '5spro' },
+              { lift: 'press', variant: 'bbb' },
+            ],
+          ]
+        },
+        {
+          title: 'Anchor',
+          length: 3,
+          days: [
+            [
+              { lift: 'squat', variant: '531' },
+              { lift: 'squat', variant: 'fsl' },
+            ],
+            [
+              { lift: 'bench', variant: '531' },
+              { lift: 'bench', variant: 'fsl' },
+            ],
+            [
+              { lift: 'deadlift', variant: '531' },
+              { lift: 'deadlift', variant: 'fsl' },
+            ],
+            [
+              { lift: 'press', variant: '531' },
+              { lift: 'press', variant: 'fsl' },
+            ],
+          ]
+        },
+      ],
+    },
   }
 
   const program = programs[params.program];
@@ -130,38 +178,45 @@ function setupProgram() {
     return;
   }
 
+  let weekCount = -1;
+
   program.sections.forEach((section, sectionIndex) => {
     const container = document.createElement('div');
+    container.classList.add('spacing');
+    container.classList.add('spacing--bottom-lg');
 
     container.innerHTML = `
-      <h2>${section.title}</h2>
+      <h3>${section.title}</h3>
 
       ${[...Array(section.length).keys()].map((week) => {
+        weekCount++;
         return `
           <details>
             <summary>Week ${week + 1}</summary>
 
             ${section.days.map((day, i) => {
               return `
-                <h4>Day ${i + 1}</h4>
+                <div class="day">
+                  <h4 class="day__title">Day ${i + 1}</h4>
 
-                <ul>
-                  ${day.map((exercise) => {
-                    const lifts = variants[exercise.variant][week];
-                    return `
-                      <li>
-                        <strong>${ucfirst(exercise.lift)}</strong>
-                        ${lifts.map(lift => {
-                          const tm = tms[exercise.lift] + (sectionIndex * 2.5);
-                          const rawWeight = (tm * lift.w) / 100;
-                          // round to nearest 2.5
-                          const weight = Math.round(rawWeight / 2.5) * 2.5;
-                          return `${weight}x${lift.r}`;
-                        }).join(', ')}
-                      </li>
-                    `;
-                  }).join('')}
-                </ul>
+                  <ul class="day__exercises">
+                    ${day.map((exercise) => {
+                      const lifts = variants[exercise.variant][week];
+                      return `
+                        <li class="day__exercise">
+                          <strong class="day__exercise-name">${ucfirst(exercise.lift)}</strong>
+                          ${lifts.map(lift => {
+                            const tm = tms[exercise.lift] + (Math.floor(weekCount  / 3) * 2.5);
+                            const rawWeight = (tm * lift.w) / 100;
+                            // round to nearest 2.5
+                            const weight = Math.round(rawWeight / 2.5) * 2.5;
+                            return `<span class="day__lift">${weight}x${lift.r}</span>`;
+                          }).join(' ')}
+                        </li>
+                      `;
+                    }).join('')}
+                  </ul>
+                </div>
               `;
             }).join('')}
           </details>
