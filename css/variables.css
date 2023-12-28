@@ -65,6 +65,10 @@
   --skin-background: var(--skin-background-light);
   --skin-color: var(--skin-color-light);
   --skin-link-color: var(--skin-link-color-light);
+
+  --transition-duration: .2s;
+  --transition-timing: ease-in-out;
+  --transition: var(--transition-duration) var(--transition-timing);
 }
 
 @media (min-width: 40rem) {
