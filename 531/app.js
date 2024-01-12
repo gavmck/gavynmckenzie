@@ -92,7 +92,7 @@ function setupProgram() {
               { lift: 'bench', variant: '5spro' },
             ],
             [
-              { lift: 'deadlift', variant: 80 },
+              { lift: 'deadlift', variant: '5spro' },
               { lift: 'press', variant: 80 },
             ],
             [
@@ -110,7 +110,7 @@ function setupProgram() {
               { lift: 'bench', variant: 531 },
             ],
             [
-              { lift: 'deadlift', variant: 'fsl' },
+              { lift: 'deadlift', variant: '531' },
               { lift: 'press', variant: 'fsl' },
             ],
             [
