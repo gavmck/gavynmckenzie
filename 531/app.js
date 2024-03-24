@@ -76,8 +76,8 @@ function setupProgram() {
       [1, 2, 3, 4, 5].map(() => ({ w: 70, r: 5 })),
       [1, 2, 3, 4, 5].map(() => ({ w: 75, r: 5 })),
     ],
-    '7thweekdeload': [{ w: 40, r: 5 }, { w: 50, r: 5 }, { w: 60, r: 5 }, { w: 70, r: 3 }, { w: 80, r: 1 }, { w: 90, r: 1 }, { w: 100, r: 1 }],
-    '7thweeektm': [{ w: 40, r: 5 }, { w: 50, r: 5 }, { w: 60, r: 5 }, { w: 70, r: 5 }, { w: 80, r: 5 }, { w: 90, r: 5 }, { w: 100, r: '3-5' }],
+    '7thweekdeload': [[{ w: 40, r: 5 }, { w: 50, r: 5 }, { w: 60, r: 5 }, { w: 70, r: 3 }, { w: 80, r: 1 }, { w: 90, r: 1 }, { w: 100, r: 1 }]],
+    '7thweektm': [[{ w: 40, r: 5 }, { w: 50, r: 5 }, { w: 60, r: 5 }, { w: 70, r: 5 }, { w: 80, r: 5 }, { w: 90, r: 5 }, { w: 100, r: '3-5' }]],
   }
 
   const programs = {
@@ -102,6 +102,22 @@ function setupProgram() {
           ]
         },
         {
+          title: '7th week deload',
+          length: 1,
+          days: [
+            [
+              { lift: 'bench', variant: '7thweekdeload' },
+            ],
+            [
+              { lift: 'deadlift', variant: '7thweekdeload' },
+              { lift: 'press', variant: '7thweekdeload' },
+            ],
+            [
+              { lift: 'squat', variant: '7thweekdeload' },
+            ],
+          ]
+        },
+        {
           title: 'Anchor',
           length: 3,
           days: [
@@ -116,6 +132,22 @@ function setupProgram() {
             [
               { lift: 'squat', variant: 531 },
               { lift: 'bench', variant: 'fsl' },
+            ],
+          ]
+        },
+        {
+          title: '7th week TM test',
+          length: 1,
+          days: [
+            [
+              { lift: 'bench', variant: '7thweektm' },
+            ],
+            [
+              { lift: 'deadlift', variant: '7thweektm' },
+              { lift: 'press', variant: '7thweektm' },
+            ],
+            [
+              { lift: 'squat', variant: '7thweektm' },
             ],
           ]
         },
@@ -146,6 +178,24 @@ function setupProgram() {
           ]
         },
         {
+          title: '7th week deload',
+          length: 1,
+          days: [
+            [
+              { lift: 'squat', variant: '7thweekdeload' },
+            ],
+            [
+              { lift: 'bench', variant: '7thweekdeload' },
+            ],
+            [
+              { lift: 'deadlift', variant: '7thweekdeload' },
+            ],
+            [
+              { lift: 'press', variant: '7thweekdeload' },
+            ],
+          ]
+        },
+        {
           title: 'Anchor',
           length: 3,
           days: [
@@ -164,6 +214,24 @@ function setupProgram() {
             [
               { lift: 'press', variant: '531' },
               { lift: 'press', variant: 'fsl' },
+            ],
+          ]
+        },
+        {
+          title: '7th week TM test',
+          length: 1,
+          days: [
+            [
+              { lift: 'squat', variant: '7thweektm' },
+            ],
+            [
+              { lift: 'bench', variant: '7thweektm' },
+            ],
+            [
+              { lift: 'deadlift', variant: '7thweektm' },
+            ],
+            [
+              { lift: 'press', variant: '7thweektm' },
             ],
           ]
         },
@@ -189,7 +257,9 @@ function setupProgram() {
       <h3>${section.title}</h3>
 
       ${[...Array(section.length).keys()].map((week) => {
-        weekCount++;
+        if (!section.title.includes('7th week')) {
+          weekCount++;
+        }
         return `
           <details>
             <summary>Week ${week + 1}</summary>
